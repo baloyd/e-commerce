@@ -44,7 +44,7 @@ router.put('/:id', (req, res) => {
   try {
     const catData = await Category.update({
       where: {
-        category_id: req.params.id,
+        id: req.params.id,
       },
     });
 
@@ -63,7 +63,7 @@ router.delete('/:id', (req, res) => {
   try {
     const catData = await Category.destroy({
       where: {
-        category_id: req.params.id,
+        id: req.params.id,
       },
     });
 
