@@ -12,26 +12,11 @@ Category.init(
     autoIncrement: true,
     primaryKey:true,
   },
-    shirts:{
+    category_name:{
       allowNull: false,
       type: DataTypes.STRING
     },
-    shorts:{
-      allowNull: false,
-      type: DataTypes.STRING
-    },
-    music:{
-      allowNull: false,
-      type: DataTypes.STRING
-    },
-    hats:{
-      allowNull: false,
-      type: DataTypes.STRING
-    },
-    shoes:{
-      allowNull: false,
-      type: DataTypes.STRING
-    },
+    
   },
   {
     sequelize,
