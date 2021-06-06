@@ -42,7 +42,7 @@ router.post('/', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
   try {
-    const catData = await Category.update({
+    const catData = await Category.update(req.body,{
       where: {
         id: req.params.id,
       },
@@ -55,6 +55,7 @@ router.put('/:id', async (req, res) => {
 
     res.status(200).json(catData);
   } catch (err) {
+    console.log(err)
     res.status(500).json(err);
   }
 });
